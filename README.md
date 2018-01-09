@@ -59,7 +59,7 @@ Also good hunting grounds:
 
 #### PubSub Topic and Subscriptions 
 
-You can create the necessary PubSub topics and subscription by hand using `gcloud` commands (see below) or just use the provided `make` file (`make gcp-setup`)
+You can create the necessary PubSub topics and subscription by hand using `gcloud` commands (see below) or just use the provided `make` file (`make gcp-setup`) which will create all the GCP dependancies.
 
 ```
 	gcloud pubsub topics create $(TOPIC_LINKS)
@@ -70,14 +70,18 @@ You can create the necessary PubSub topics and subscription by hand using `gclou
 
 #### BigQuery Table
 
+Create a BigQuery table. You can do this using the `bq` command or just use the provided `make` file (`make gcp-setup`) which will create all the GCP dependancies.
 
+```
+	bq mk $(APP_NAME)
+	bq mk -t $(APP_NAME).$(TOPIC_IMAGES) ./config/images-schema.json 
+```
 
-## TODO
+#### Dataflow Job
 
-* Publish candidate image URLS
-* Refactor search to publish to PubSub
-* Create subscriber for image links from pubsub
-* Refactor processor to process image links from topic
-* Publish valid processed images to processed topic
-* Create job to drain all content to BQ
-* Create image downloader to downlaod valid images to GCS
+```
+	gsutil mb gs://$(PROJECT_NAME)-$(APP_NAME)-tmp
+	gcloud dataflow jobs run $(APP_NAME)-JOB \
+		--gcs-location gs://dataflow-templates/pubsub-to-bigquery/template_file \
+		--parameters="topic=projects/$(PROJECT_NAME)/topics/$(TOPIC_IMAGES)","table=$(PROJECT_NAME):$(APP_NAME).$(TOPIC_IMAGES)","stagingLocation=gs://$(PROJECT_NAME)-$(APP_NAME)-tmp"
+```
