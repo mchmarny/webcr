@@ -1,0 +1,11 @@
+{
+	"ImportPath": "github.com/mchmarny/webcr",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "d866cfc389cec985d6fda2859936a575a55a3ab6"
+		}
+	]
+}
