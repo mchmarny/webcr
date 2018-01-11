@@ -77,6 +77,17 @@ Create a BigQuery table. You can do this using the `bq` command or just use the 
 	bq mk -t $(APP_NAME).$(TOPIC_IMAGES) ./config/images-schema.json 
 ```
 
+Where the `image-schema.json` file has
+
+```
+[
+    { "mode": "REQUIRED", "name": "id", "type": "STRING" }, 
+    { "mode": "REQUIRED", "name": "title", "type": "STRING" }, 
+    { "mode": "REQUIRED", "name": "link", "type": "STRING" }, 
+    { "mode": "REPEATED", "name": "parts", "type": "STRING" }
+]
+```
+
 #### Dataflow Job
 
 ```
