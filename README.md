@@ -2,7 +2,7 @@
 
 OCR fro the Web - Find and extract text from social media images (e.g. airline boarding passes)
 
-> Note, DO NOT post images of your boarding pass or airline tickets, even with just a barcode as that can be easilly converted to data as well and it includes ton more data than you think
+> Note, DO NOT post images of your boarding pass or airline tickets, even with just a barcode as that can be easily converted to data as well and it includes ton more data than you think
 
 ## What does it do
 
