@@ -6,6 +6,8 @@ OCR fro the Web - Find and extract text from social media images (e.g. airline b
 
 ## What does it do
 
+> Acquire images > Process to extract text > Persist in database for analyzes 
+
 #### Acquire Images
 
 1. Search Google for images for a specific search query
@@ -51,11 +53,9 @@ Also good hunting grounds:
 
 > Note: `Free` version of Google Custom Search has a limit of `100` searches per day
 
-
-
 #### Google Vision API
 
-> Default free quota includes 1,000 queries and 600 queries per min limit
+> Note, free quota includes 1,000 queries and 600 queries per min limit
 
 #### PubSub Topic and Subscriptions 
 
