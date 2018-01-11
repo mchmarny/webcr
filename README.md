@@ -6,7 +6,7 @@ OCR fro the Web - Find and extract text from social media images (e.g. airline b
 
 ## What does it do
 
-
+![webcr topology](/../master/img/overview.png?raw=true "webcr topology")
 
 #### Acquire Images
 
