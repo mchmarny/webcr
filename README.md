@@ -42,6 +42,8 @@ OCR for the Web - Find and extract text from social media images (e.g. restauran
 * Make sure the `Image Search` option is enabled and Update button at the bottom when you are done
 * Define that value as `$SEARCH_CTX` in your environment variables or pass into the `webcr` as `--ctx` argument on each execution
 
+> Note: `Free` version of Google Custom Search has a limit of `100` searches per day
+
 Also good hunting grounds:
 
 * *.flickr.com
@@ -50,8 +52,6 @@ Also good hunting grounds:
 * *.instagram.com
 * *.twitter.com
 * *.medium.com
-
-> Note: `Free` version of Google Custom Search has a limit of `100` searches per day
 
 #### Google Vision API
 
