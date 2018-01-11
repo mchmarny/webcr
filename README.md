@@ -1,6 +1,6 @@
 # WebCR
 
-OCR for the Web - Find and extract text from social media images (e.g. airline boarding passes)
+OCR for the Web - Find and extract text from social media images (e.g. restaurant menues or airline boarding passes)
 
 > Note, DO NOT post images of your boarding pass or airline tickets, even with just a barcode as that can be easily converted to data as well and it includes ton more data than you think
 
