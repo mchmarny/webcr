@@ -6,7 +6,7 @@ OCR fro the Web - Find and extract text from social media images (e.g. airline b
 
 ## What does it do
 
-> Acquire images > Process to extract text > Persist in database for analyzes 
+
 
 #### Acquire Images
 
